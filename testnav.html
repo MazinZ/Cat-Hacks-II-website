@@ -71,6 +71,14 @@ html, body {
   	position: fixed;
     width: 100%;
 }
+
+#navid.affix {
+    position: fixed;
+    top: 0px;
+	width: 100%;
+	z-index:100;  
+
+}
 /*@font-face {
 	font-family:DCB;
 	src: url('../fonts/DCB.ttf');
@@ -235,6 +243,7 @@ url('./DCB.ttf') format('truetype');
     
     	</div>
  </div>
+ <div id="nav-wrapper">
  <nav role="navigation" id="navid" class="navbar navbar-default navreplace">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -262,7 +271,9 @@ url('./DCB.ttf') format('truetype');
           
         </div>
     </nav>
+ </div>
 	<div id="about">
+    	<div id="aboutBar" style="margin:30px 0px 0px 0px; height:10px; width:90%; background-color:#508dad; float:right;"></div>
 		<div id = "aboutTextbox"> 
         	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
     </div>
@@ -282,25 +293,29 @@ url('./DCB.ttf') format('truetype');
 	</div>
     
     <script>
-$(document).ready(function() {
+/*$(document).ready(function() {
   
   var height = $('#main').height();
   console.log(height);
   $(window).scroll(function () {
-      //if you hard code, then use console
-      //.log to determine when you want the 
-      //nav bar to stick.  
       console.log($(window).scrollTop())
     if ($(window).scrollTop() > height) {
-      $('#navid').addClass('navbar-fixed-top');
+      $('#navid').addClass('navbar-fixed');
     }
     if ($(window).scrollTop() < height+.01) {
-      $('#navid').removeClass('navbar-fixed-top');
+      $('#navid').removeClass('navbar-fixed');
     }
   });
-});
+});*/
+
+
+
 var $navheight = $("#about").height()-$("#main").height();
 var $navheight2 = $("#about").height()-$("#main").height();
+
+$('#navid').affix({
+    offset: { top: $('#navid').offset().top }
+});
 
 $(".navbar-nav li a").css({"line-height":$navheight+"px"});
 $(".navbar-nav li a").css({"height":$navheight+"px"});
@@ -311,6 +326,7 @@ $(".navbar-brand").css({"line-height":$navheight2+"px"});
 $(".navbar-brand").css({"height":$navheight2+"px"});
 $(".navbar-brand").css({"padding-top":"0px"});
 
+$('#nav-wrapper').height($("#navid").height());
 
 
 <!--$(".navbar-brand").css({"line-height":$navheight+"px; height":$navheight+"px; padding-top:0;" } );-->
