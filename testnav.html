@@ -1,0 +1,467 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./bootstrap/js/bootstrap.js"></script>
+<script src="./particles.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+
+<style>
+html, body {
+        height: 100%;
+        margin: 0px;
+    }
+#main {
+	height:85%;	
+	margin:0;
+	background-color:#fff; /*efefef*/
+	width:100%;
+	position:relative;
+}
+#about {
+	height:100%;	
+	margin:0;
+	background-color:#efefef;
+	width:100%;
+	position:relative;
+}
+
+#apply {
+	height:100%;	
+	margin:0;
+	background-color:#fff;
+	width:100%;
+	position:relative;
+
+}
+
+#faq {
+	height:100%;	
+	margin:0;
+	background-color:#efefef;
+	width:100%;
+}
+
+
+#sponsor {
+	height:100%;	
+	margin:0;
+	background-color:#fff;
+	width:100%;
+}
+.navreplace{
+	background-color:#fff;
+	border:0;
+}
+
+.navbar-brand{
+	font-size:45px;
+	-webkit-font-smoothing: antialiased !important;
+	font-family: DINCondensed-Bold, sans-serif;
+	color:#508dad !important;
+	padding-left:60px;
+	
+}
+.navbar-fixed {
+    top: 0;
+    z-index: 100;
+  	position: fixed;
+    width: 100%;
+}
+/*@font-face {
+	font-family:DCB;
+	src: url('../fonts/DCB.ttf');
+}*/
+.navbar-nav li a{
+	font-size:22px;	
+	color:#508dad !important;
+	font-family:SukhumvitSet-Thin, sans-serif;
+	font-weight:500;
+}
+
+.navbar-nav > li{
+  padding-left:15px;
+  padding-right:15px;
+}
+.navbar{
+	margin-bottom:0px;	
+}
+
+#mydiv {
+	position:absolute;
+	top: 35%;
+	left: 50%;
+	width:311px;
+	height:430px; /*461*/
+	margin-top: -155.5px; /*set to a negative number 1/2 of your height*/
+	margin-left: -155.5px; /*set to a negative number 1/2 of your width*/
+	/*border: 1px solid #ccc;*/
+  	background-image:url(img/logo.png);
+	background-repeat:no-repeat;
+	background-color:#fff;
+	
+
+}
+#textbox {
+	width:311px;
+	height:150px;	
+	text-align:center;
+	margin-top:350px;
+	font-family: DINCondensed-Bold,sans-serif;
+	color:#508dad;
+	font-weight:100;
+	line-height: .2 !important;
+
+}
+
+h1 {
+	font-size:50px;
+	-webkit-font-smoothing: antialiased;
+	font-family: DINCondensed-Bold, sans-serif;
+	line-height: .3 !important;
+
+}
+h2 {
+	font-size:30px;	
+
+}
+
+#registration {
+	
+	width:310px;
+	height:67px;
+  	background-image:url(img/registration.png);
+	background-repeat:no-repeat;
+	position: absolute;
+ 	 top: 50%;
+  	left: 50%;
+	 margin: -33.5px 0 0 -155px;
+
+}
+
+#aboutTextbox {
+	width:80%;
+	margin-left:10%;
+	margin-right:10%;
+	background-color:#fff;
+	color:#666666;
+	height:500px;
+	position: relative;
+ 	top: 50%;
+	transform: translateY(-50%);
+	padding:40px;
+	font-family: Georgia, Times, 'Times New Roman', serif;
+	font-style:italic;
+	font-size:16px;
+}
+
+.navbar-toggle{
+	margin-top:36px; /*for the mobile nav button to be centered vertically*/
+}
+
+
+
+/*       For navbar animation         */
+li > a {
+  position: relative;
+  text-decoration: none;
+}
+
+
+li > a:before {
+   content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #508dad;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+/*                                    */
+
+
+
+
+
+
+
+
+@font-face {
+font-family: 'DCB';
+src: 
+url('./DCB.ttf') format('truetype');
+
+}
+/*url('../fonts/DCB.eot?#iefix') format('embedded-opentype');*/
+
+@font-face { font-family: 'DINCondensed-Bold'; src: url('/css/webfont/DINCondensed-Bold.eot?#iefix') format('embedded-opentype'), url('/css/webfont/DINCondensed-Bold.woff') format('woff'), url('/css/webfont/DINCondensed-Bold.ttf') format('truetype'), url('/css/webfont/DINCondensed-Bold.svg#DINCondensed-Bold') format('svg'); font-weight: normal; font-style: normal; }
+
+@font-face { font-family: 'SukhumvitSet-Thin'; src: url('/css/webfont/SukhumvitSet-Thin.eot?#iefix') format('embedded-opentype'), url('/css/webfont/SukhumvitSet-Thin.woff') format('woff'), url('/css/webfont/SukhumvitSet-Thin.ttf') format('truetype'), url('/css/webfont/SukhumvitSet-Thin.svg#SukhumvitSet-Thin') format('svg'); font-weight: normal; font-style: normal; }
+
+</style>
+</head>
+
+<body>
+	
+ <div id="main">
+ 	<div id="mydiv">
+
+	<div id="textbox"> 
+		<h1>C A T H A C K S II</h1>
+		<h2> FALL 2015</h2>
+	</div>
+
+	</div>
+    
+	<div class="container-fluid">
+		<!--<div class="row">
+   		<div class="col-lg-6 col-lg-offset-3 text-center">center</div>
+   	 	</div>-->
+    
+    	</div>
+ </div>
+ <nav role="navigation" id="navid" class="navbar navbar-default navreplace">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="#" style="margin-top:5px;" class="navbar-brand">C A T H A C K S II</a>
+
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+               <!-- <li class="active"><a href="#">Home</a></li>-->
+                <li id="HOME"><a class="navbar-right" href="#">HOME</a></li>
+                <li id="ABOUT"><a href="#">ABOUT</a></li>
+                <li id="APPLY"><a href="#">APPLY</a></li>
+                <li id="FAQ"><a href="#">FAQ</a></li>
+                <li id="SPONSORS"><a href="#">SPONSORS</a></li>
+
+            </ul>
+          
+        </div>
+    </nav>
+	<div id="about">
+		<div id = "aboutTextbox"> 
+        	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </div>
+    </div>
+    
+    <div id="apply">
+	<div id="registration" ></div>
+
+    </div>
+    
+    <div id="faq">
+
+    </div>
+
+	<div id="sponsor">
+      
+	
+	</div>
+    
+    <script>
+$(document).ready(function() {
+  
+  var height = $('#main').height();
+  console.log(height);
+  $(window).scroll(function () {
+      //if you hard code, then use console
+      //.log to determine when you want the 
+      //nav bar to stick.  
+      console.log($(window).scrollTop())
+    if ($(window).scrollTop() > height) {
+      $('#navid').addClass('navbar-fixed-top');
+    }
+    if ($(window).scrollTop() < height+.01) {
+      $('#navid').removeClass('navbar-fixed-top');
+    }
+  });
+});
+var $navheight = $("#about").height()-$("#main").height();
+var $navheight2 = $("#about").height()-$("#main").height();
+
+$(".navbar-nav li a").css({"line-height":$navheight+"px"});
+$(".navbar-nav li a").css({"height":$navheight+"px"});
+$(".navbar-nav li a").css({"padding-top":"0px"});
+
+
+$(".navbar-brand").css({"line-height":$navheight2+"px"});
+$(".navbar-brand").css({"height":$navheight2+"px"});
+$(".navbar-brand").css({"padding-top":"0px"});
+
+
+
+<!--$(".navbar-brand").css({"line-height":$navheight+"px; height":$navheight+"px; padding-top:0;" } );-->
+
+
+
+$("#HOME").click(function(e) {
+	e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#main").offset().top
+    }, 1000);
+});
+$("#ABOUT").click(function(e) {
+	 e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#about").offset().top
+    }, 1000);
+});
+$("#APPLY").click(function(e) {
+	 e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#apply").offset().top
+    }, 1000);
+});
+$("#FAQ").click(function(e) {
+	 e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#faq").offset().top
+    }, 1000);
+});
+$("#SPONSORS").click(function(e) {
+	 e.preventDefault();
+    $('html, body').animate({
+        scrollTop: $("#sponsor").offset().top
+    }, 1000);
+});
+
+
+
+particlesJS("main", {
+  "particles": {
+    "number": {
+      "value": 60,
+      "density": {
+        "enable": true,
+        "value_area": 800
+      }
+    },
+    "color": {
+      "value": "#e1e0e0"
+    },
+    "shape": {
+      "type": "circle",
+      "stroke": {
+        "width": 0,
+        "color": "#000000"
+      },
+      "polygon": {
+        "nb_sides": 5
+      },
+      "image": {
+        "src": "img/github.svg",
+        "width": 100,
+        "height": 100
+      }
+    },
+    "opacity": {
+      "value": 0.5,
+      "random": false,
+      "anim": {
+        "enable": false,
+        "speed": 1,
+        "opacity_min": 0.1,
+        "sync": false
+      }
+    },
+    "size": {
+      "value": 7,
+      "random": true,
+      "anim": {
+        "enable": false,
+        "speed": 40,
+        "size_min": 0.1,
+        "sync": false
+      }
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#e1e0e0", //c6c6c6
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 3,
+      "direction": "none",
+      "random": false,
+      "straight": false,
+      "out_mode": "out",
+      "bounce": false,
+      "attract": {
+        "enable": false,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+  },
+  "interactivity": {
+    "detect_on": "canvas",
+    "events": {
+      "onhover": {
+        "enable": true,
+        "mode": "grab"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "push"
+      },
+      "resize": true
+    },
+    "modes": {
+      "grab": {
+        "distance": 140,
+        "line_linked": {
+          "opacity": 1
+        }
+      },
+      "bubble": {
+        "distance": 400,
+        "size": 40,
+        "duration": 2,
+        "opacity": 8,
+        "speed": 3
+      },
+      "repulse": {
+        "distance": 200,
+        "duration": 0.4
+      },
+      "push": {
+        "particles_nb": 4
+      },
+      "remove": {
+        "particles_nb": 2
+      }
+    }
+  },
+  "retina_detect": true
+});
+</script>
+
+
+</body>
+</html>
