@@ -107,7 +107,7 @@ html, body {
 	margin-top: -155.5px; /*set to a negative number 1/2 of your height*/
 	margin-left: -155.5px; /*set to a negative number 1/2 of your width*/
 	/*border: 1px solid #ccc;*/
-  	background-image:url(img/logo.png);
+  	background-image:url(img/logo.svg);
 	background-repeat:no-repeat;
 	background-color:#fff;
 	
@@ -239,13 +239,47 @@ url('./DCBA.ttf') format('truetype');
 
 }
 
+.animated { 
+    -webkit-animation-duration: 1s; 
+    animation-duration: 1s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+@-webkit-keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInDown { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+.fadeInDown { 
+    -webkit-animation-name: fadeInDown; 
+    animation-name: fadeInDown; 
+}
+
 </style>
 </head>
 
 <body>
 	
  <div id="main" class="container">
- 	<div id="mydiv">
+ 	<div id="mydiv" class="fadeInDown animated">
 
 	<div id="textbox"> 
 		<h1>C A T H A C K S II</h1>
@@ -289,8 +323,12 @@ url('./DCBA.ttf') format('truetype');
             <!--<h3 style="margin:30px 0px 0px 15%; float:left;" > ABOUT</h3>-->
 
     	<div id="aboutBar" style="margin:30px 0px 0px 0px; height:10px; width:75%; background-color:#508dad; float:right;"></div>
-		<div id = "aboutTextbox"> 
-        	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p> </div>
+		<div id = "aboutTextbox" style="overflow:hidden;"> 
+        	<p style="line-height:3" class="navbar-text">So you've heard mobile is kind of a big deal, and you're not sure how to transform your traditional desktop-focused web apps into fast, effective multi-device experiences.
+
+This course is designed to teach web developers what they need to know to create great cross-device web experiences.
+
+This course will focus on building mobile-first web apps, which will work across multiple platforms including:</p> </div>
     </div>
     
     <div id="apply" class="container">
@@ -299,7 +337,7 @@ url('./DCBA.ttf') format('truetype');
     </div>
     
     <div id="faq" class="container">
-
+    		
     </div>
 
 	<div id="sponsor" class="container">
@@ -358,7 +396,7 @@ $("#HOME").click(function(e) {
 $("#ABOUT").click(function(e) {
 	 e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#about").offset().top - $navheight
+        scrollTop: $("#about").offset().top - $navheight  // Made all of these their own onclick function because of this one <----
     }, 1000);
 });
 $("#APPLY").click(function(e) {
@@ -420,7 +458,7 @@ particlesJS("main", {
       }
     },
     "size": {
-      "value": 7,
+      "value": 9,
       "random": true,
       "anim": {
         "enable": false,
