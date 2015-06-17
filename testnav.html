@@ -24,7 +24,7 @@ html, body {
 #about {
 	height:100%;	
 	margin:0;
-	background-color:#efefef;
+	background-color:#fff;
 	width:100%;
 	position:relative;
 }
@@ -32,7 +32,7 @@ html, body {
 #apply {
 	height:100%;	
 	margin:0;
-	background-color:#fff;
+	background-color:#efefef;
 	width:100%;
 	position:relative;
 
@@ -55,6 +55,10 @@ html, body {
 .navreplace{
 	background-color:#fff;
 	border:0;
+	/*border-bottom-style: solid;
+    border-bottom-width: 15px;
+	border-bottom-width:4px;
+	border-bottom-color:#efefef;*/
 }
 
 .navbar-brand{
@@ -130,6 +134,7 @@ h1 {
 	-webkit-font-smoothing: antialiased;
 	font-family: DINCondensed-Bold, sans-serif;
 	line-height: .3 !important;
+	color:#508dad !important;
 
 }
 h2 {
@@ -157,21 +162,43 @@ h3 {
 
 }
 
-#aboutTextbox {
-	width:80%;
-	margin-left:10%;
-	margin-right:10%;
-	background-color:#fff;
-	color:#666666;
-	height:500px;
-	position: relative;
- 	top: 50%;
-	transform: translateY(-50%);
-	padding:40px;
-	font-family: Georgia, Times, 'Times New Roman', serif;
-	font-style:italic;
-	font-size:16px;
+
+
+#aboutTextbox2 {
+	width:320px;
+	height:300px;
+	
+	
 }
+
+.center h1 {
+	margin:0;
+	align:center;
+	margin-bottom:20px;	
+	
+	
+}
+
+@media screen and (min-width: 640px) { 
+	#aboutTextbox2 {
+		width:50%;
+	}
+	p { font-size: 18px;  !important
+	
+	} 
+}
+@media screen and (min-width: 960px) { p { font-size: 21px; !important } }
+@media screen and (min-width: 1224px) { p { font-size: 24px; } }
+
+.center {
+       position: absolute;
+       top: 0;
+       left: 0;
+       bottom: 0;
+       right: 0;
+       margin: auto;
+  }
+  
 
 .navbar-toggle{
 	margin-top:36px; /*for the mobile nav button to be centered vertically*/
@@ -218,6 +245,13 @@ li > a:hover:before {
 }
 
 
+p {  
+	font-family: "Aleo", Georgia, Serif;
+  	font-weight: 400;
+    text-align: center;	
+	line-height:2;
+	color:#6e6e6e;
+}
 
 
 @font-face {
@@ -273,22 +307,30 @@ url('./DCBA.ttf') format('truetype');
     animation-name: fadeInDown; 
 }
 
+::selection {
+  background: #b9b9b9; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #b9b9b9; /* Gecko Browsers */
+}
+
 </style>
 </head>
 
 <body>
 	
- <div id="main" class="container">
- 	<div id="mydiv" class="fadeInDown animated">
+ <div id="main" class="container"  >
 
+ 	<div id="mydiv" class="fadeInDown animated" style="z-index:110;">
+	
 	<div id="textbox"> 
 		<h1>C A T H A C K S II</h1>
 		<h2> FALL 2015</h2>
 	</div>
-
 	</div>
     
-	
+	<!--<img class="col-xs-6 col-md-4" style="height:90%;width:90%; opacity:.32; margin-left:0; margin-bottom:0; z-index:-100;" src="./img/icetracefinal.svg" />-->
+    <!--</div>-->
  </div>
  <div id="nav-wrapper">
  <nav role="navigation" id="navid" class="navbar navbar-default navreplace">
@@ -310,8 +352,8 @@ url('./DCBA.ttf') format('truetype');
                <!-- <li class="active"><a href="#">Home</a></li>-->
                 <li id="HOME"><a href="#home">HOME</a></li>
                 <li id="ABOUT"><a href="#about">ABOUT</a></li>
-                <li id="APPLY"><a href="#apply">APPLY</a></li>
                 <li id="FAQ"><a href="#faq">FAQ</a></li>
+                <li id="APPLY"><a href="#apply">APPLY</a></li>
                 <li id="SPONSORS"><a href="#sponsors">SPONSORS</a></li>
 
             </ul>
@@ -322,24 +364,25 @@ url('./DCBA.ttf') format('truetype');
 	<div id="about" class= "container">
             <!--<h3 style="margin:30px 0px 0px 15%; float:left;" > ABOUT</h3>-->
 
-    	<div id="aboutBar" style="margin:30px 0px 0px 0px; height:10px; width:75%; background-color:#508dad; float:right;"></div>
-		<div id = "aboutTextbox" style="overflow:hidden;"> 
-        	<p style="line-height:3" class="navbar-text">So you've heard mobile is kind of a big deal, and you're not sure how to transform your traditional desktop-focused web apps into fast, effective multi-device experiences.
-
-This course is designed to teach web developers what they need to know to create great cross-device web experiences.
-
-This course will focus on building mobile-first web apps, which will work across multiple platforms including:</p> </div>
+    	<!--<div id="aboutBar" style="margin:30px 0px 0px 0px; height:10px; width:75%; background-color:#508dad; float:right;"></div>-->
+		<div id="aboutTextbox2" class = "center "> 
+        <h1 style="text-align:center; display:block;"> A B O U T </h1>
+        	<p><underline>Bitcamp</underline> is a place for exploration. You will have 36 hours to delve into your curiosities, learn something new, and make something awesome. With world-class mentors and hundreds of fellow campers, you're in for an amazing time. If you're ready for an adventure, see you by the fire!</p> 
+		<!--<h2 style="display:inline; text-align:center;"> LEXINGTON, KY </h2> <h2 style="display:inline; text-align:center;"> MID NOVEMBER </h2>-->
+        </div>
     </div>
     
-    <div id="apply" class="container">
-	<div id="registration" ></div>
-
-    </div>
+    
     
     <div id="faq" class="container">
     		
     </div>
 
+	<div id="apply" class="container">
+	<div id="registration" ></div>
+
+    </div>
+    
 	<div id="sponsor" class="container">
       
       
