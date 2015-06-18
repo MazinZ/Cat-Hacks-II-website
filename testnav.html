@@ -5,6 +5,8 @@
 <title>CatHacks II</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="./bootstrap/js/bootstrap.js"></script>
+
+<script src="./js/jquery.singlePageNav.min.js"></script>
 <script src="./particles.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
@@ -14,7 +16,7 @@ html, body {
         height: 100%;
         margin: 0px;
     }
-#main {
+#home {
 	height:85%;	
 	margin:0;
 	background-color:#fff; /*efefef*/
@@ -43,14 +45,16 @@ html, body {
 	margin:0;
 	background-color:#efefef;
 	width:100%;
+	position:relative;
 }
 
 
-#sponsor {
+#sponsors {
 	height:100%;	
 	margin:0;
 	background-color:#fff;
 	width:100%;
+	position:relative;
 }
 .navreplace{
 	background-color:#fff;
@@ -234,24 +238,81 @@ li > a:hover:before {
   transform: scaleX(1);
 }
 
+
+/*active {
+   content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 3px;
+  left: 0;
+  visibility: visible;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}*/
 /*                                    */
 
 
 
-.active{
+/*.active{
 	color: white;
 	background-color: rgba(100,100,100,1);
 	border-left: thick solid rgba(0,255,0,0.5) !important;
-}
+}*/
 
 
 p {  
 	font-family: "Aleo", Georgia, Serif;
   	font-weight: 400;
-    text-align: center;	
+    text-align: left;	
 	line-height:2;
 	color:#6e6e6e;
 }
+
+/*            --------------------           */
+.wrapper { 
+  border : 2px solid #000; 
+  overflow:hidden;
+}
+
+.wrapper div {
+   min-height: 200px;
+   padding: 10px;
+}
+#one {
+  background-color: gray;
+  float:left; 
+  margin-right:20px;
+  width:140px;
+  border-right:2px solid #000;
+}
+#two { 
+  background-color: white;
+  overflow:hidden;
+  margin:10px;
+  border:2px dashed #ccc;
+  min-height:170px;
+}
+
+@media screen and (max-width: 400px) {
+   #one { 
+    float: none;
+    margin-right:0;
+    width:auto;
+    border:0;
+    border-bottom:2px solid #000;    
+  }
+}
+
+/*       ------------------               */
+
+
+
+
+
+
 
 
 @font-face {
@@ -314,12 +375,16 @@ url('./DCBA.ttf') format('truetype');
   background: #b9b9b9; /* Gecko Browsers */
 }
 
+.active {
+	background-color: #508dad;
+}
+
 </style>
 </head>
 
 <body>
 	
- <div id="main" class="container"  >
+ <div id="home" class="container"  >
 
  	<div id="mydiv" class="fadeInDown animated" style="z-index:110;">
 	
@@ -365,7 +430,7 @@ url('./DCBA.ttf') format('truetype');
             <!--<h3 style="margin:30px 0px 0px 15%; float:left;" > ABOUT</h3>-->
 
     	<!--<div id="aboutBar" style="margin:30px 0px 0px 0px; height:10px; width:75%; background-color:#508dad; float:right;"></div>-->
-		<div id="aboutTextbox2" class = "center "> 
+		<div id="one" class = "center wrapper "> 
         <h1 style="text-align:center; display:block;"> A B O U T </h1>
         	<p><underline>Bitcamp</underline> is a place for exploration. You will have 36 hours to delve into your curiosities, learn something new, and make something awesome. With world-class mentors and hundreds of fellow campers, you're in for an amazing time. If you're ready for an adventure, see you by the fire!</p> 
 		<!--<h2 style="display:inline; text-align:center;"> LEXINGTON, KY </h2> <h2 style="display:inline; text-align:center;"> MID NOVEMBER </h2>-->
@@ -374,25 +439,94 @@ url('./DCBA.ttf') format('truetype');
     
     
     
-    <div id="faq" class="container">
-    		
-    </div>
+    <div id="faq" class="container"> <!--FAQ-->
+    	
+    </div> <!-- FAQ END -->
 
 	<div id="apply" class="container">
 	<div id="registration" ></div>
 
     </div>
     
-	<div id="sponsor" class="container">
+	<div id="sponsors" class="container"> <!--SPONSORS-->
       
-      
-	
+      	<div class = "center">
+        <div class="row">
+
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href="#">
+                    <img class="img-responsive" src="http://placehold.it/200x150" alt="">
+                </a>
+            </div>
+        </div>
+
+        <hr>
+
+        
+            
+            
 	</div>
+	</div> <!--SPONSORS END-->
     
     <script>
 /*$(document).ready(function() {
   
-  var height = $('#main').height();
+  var height = $('#home').height();
   console.log(height);
   $(window).scroll(function () {
       console.log($(window).scrollTop())
@@ -407,8 +541,8 @@ url('./DCBA.ttf') format('truetype');
 
 
 
-var $navheight = $("#about").height()-$("#main").height();
-var $navheight2 = $("#about").height()-$("#main").height();
+var $navheight = $("#about").height()-$("#home").height();
+var $navheight2 = $("#about").height()-$("#home").height();
 
 $('#navid').affix({
     offset: { top: $('#navid').offset().top }
@@ -433,7 +567,7 @@ $('#nav-wrapper').height($("#navid").height());
 $("#HOME").click(function(e) {
 	e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#main").offset().top
+        scrollTop: $("#home").offset().top
     }, 1000);
 });
 $("#ABOUT").click(function(e) {
@@ -457,13 +591,13 @@ $("#FAQ").click(function(e) {
 $("#SPONSORS").click(function(e) {
 	 e.preventDefault();
     $('html, body').animate({
-        scrollTop: $("#sponsor").offset().top
+        scrollTop: $("#sponsors").offset().top
     }, 1000);
 });
 
 
 
-particlesJS("main", {
+particlesJS("home", {
   "particles": {
     "number": {
       "value": 60,
@@ -574,8 +708,12 @@ particlesJS("main", {
   "retina_detect": true
 });
 
+<!--$('#navid').singlePageNav();-->
+//$(document).ready().getElementById
+//document.getElementsByClassName('current').focus();
+
 /*$(document).ready(function(){
-	var $navheight = $("#about").height()-$("#main").height();
+	var $navheight = $("#about").height()-$("#home").height();
   // $sections incleudes all of the container divs that relate to menu items.
   var $sections = $('.container');
   
@@ -605,8 +743,11 @@ particlesJS("main", {
       // This is the bit of code that uses the currentSection as its source of ID
       var id = $currentSection.attr('id');
    	 $('a').removeClass('active');
-   	 $("[href=#"+id+"]").addClass('active');
-      
+	 var idCaps = id.toLowerCase();
+	 console.log(idCaps);
+   	 $("[href=#"+idCaps+"]").addClass('active');
+     //$("#"+idCaps).trigger('mouseover');
+
     })
 
   });
