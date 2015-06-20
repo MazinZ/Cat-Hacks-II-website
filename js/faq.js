@@ -73,11 +73,11 @@ jQuery(document).ready(function($){
 	}
 
 	function updateCategory(){
-		updateCategoryPosition();
+		//updateCategoryPosition();
 		updateSelectedCategory();
 	}
 
-	function updateCategoryPosition() {
+	/*function updateCategoryPosition() {
 		var top = $('.faq').offset().top,
 			height = jQuery('.faq').height() - jQuery('.categories').height(),
 			margin = 20;
@@ -108,7 +108,7 @@ jQuery(document).ready(function($){
 				'top': 0,
 			});
 		}
-	}
+	}*/
 
 	function updateSelectedCategory() {
 		faqsSections.each(function(){
