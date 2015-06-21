@@ -90,11 +90,11 @@ html, body {
 }
 
 .navbar-brand{
-	font-size:45px;
+	font-size:38px;
 	-webkit-font-smoothing: antialiased !important;
 	font-family: DINCondensed-Bold, sans-serif;
 	color:#508dad !important;
-	padding-left:60px;
+	padding-left:120px;
 	
 }
 .navbar-fixed {
@@ -116,15 +116,15 @@ html, body {
 	src: url('../fonts/DCB.ttf');
 }*/
 .navbar-nav li a{
-	font-size:22px;	
+	font-size:16px;	
 	color:#508dad !important;
-	font-family:SukhumvitSet-Thin, sans-serif;
-	font-weight:500;
+	font-family:Ancillary, sans-serif;
+	font-weight:300;
 }
 
 .navbar-nav > li{
-  padding-left:15px;
-  padding-right:15px;
+  padding-left:30px;
+  padding-right:30px;
 }
 .navbar{
 	margin-bottom:0px;	
@@ -226,7 +226,7 @@ h4 {
 	#aboutTextbox2 {
 		width:50%;
 	}
-	p { font-size: 18px;  !important
+	p { font-size: 18px  !important; 
 	
 	} 
 }
@@ -277,7 +277,18 @@ li > a:hover:before {
   transform: scaleX(1);
 }
 
+/*  MOVE NAVBAR LINKS */
 
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+/*                   */
 /*active {
    content: "";
   position: absolute;
@@ -376,6 +387,11 @@ font-family: 'DCBA';
 src: 
 url('./DCBA.ttf') format('truetype');
 
+}
+
+@font-face {
+	font-family:Ancillary;
+	src: url('./Ancillary-Regular.otf');
 }
 
 .animated { 
@@ -483,13 +499,14 @@ url('./DCBA.ttf') format('truetype');
         </div>
         <!-- Collection of nav links and other content for toggling -->
         <div id="navbarCollapse" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
+
+            <ul class="nav navbar-nav"  >
                <!-- <li class="active"><a href="#">Home</a></li>-->
-                <li id="HOME"><a href="#home">HOME</a></li>
+                <li id="HOME" style="padding-left:0;"><a href="#home">HOME</a></li>
                 <li id="ABOUT"><a href="#about">ABOUT</a></li>
                 <li id="FAQ"><a href="#faq">FAQ</a></li>
                 <li id="APPLY"><a href="#apply">APPLY</a></li>
-                <li id="SPONSORS"><a href="#sponsors">SPONSORS</a></li>
+                <li id="SPONSORS" style="padding-right:0;"><a href="#sponsors">SPONSORS</a></li>
 
             </ul>
           
@@ -514,7 +531,7 @@ url('./DCBA.ttf') format('truetype');
         			 <div class = "col-md-12 " style="background-color:#fff;"> 
                      		<div id="breadcrumbs">
    								 <a >LEXINGTON, KY</a>
-   								 <a >MID NOVEMBER</a>
+   								 <a >THIS NOVEMBER</a>
 							</div>
                      </div>
 						</div>
@@ -540,8 +557,8 @@ url('./DCBA.ttf') format('truetype');
         
         
         
-        
-       <section class="faq">
+      
+    <section class="faq">
 	<ul class="categories">
 		<li><a class="selected" href="#basics">Basics</a></li>
 		<li><a href="#mobile">Mobile</a></li>
