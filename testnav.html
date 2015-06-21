@@ -35,7 +35,6 @@ html, body {
         -o-user-select: none; 
 }
 #about {
-	height:100%;	
 	margin:0;
 	background-color:#fff;
 	width:100%;
@@ -94,7 +93,10 @@ html, body {
 	-webkit-font-smoothing: antialiased !important;
 	font-family: DINCondensed-Bold, sans-serif;
 	color:#508dad !important;
-	padding-left:120px;
+	padding-left:15%;
+	line-height:110px;
+	height:110px;
+	padding-top:0px;
 	
 }
 .navbar-fixed {
@@ -102,6 +104,9 @@ html, body {
     z-index: 100;
   	position: fixed;
     width: 100%;
+	
+	
+	
 }
 
 #navid.affix {
@@ -120,6 +125,10 @@ html, body {
 	color:#508dad !important;
 	font-family:Ancillary, sans-serif;
 	font-weight:300;
+	line-height:110px;
+	height:110px;
+	padding-top:0px;
+
 }
 
 .navbar-nav > li{
@@ -127,7 +136,7 @@ html, body {
   padding-right:30px;
 }
 .navbar{
-	margin-bottom:0px;	
+	margin-bottom:0px;
 }
 
 #mydiv {
@@ -226,7 +235,7 @@ h4 {
 	#aboutTextbox2 {
 		width:50%;
 	}
-	p { font-size: 18px  !important; 
+	p { font-size: 20px  !important; 
 	
 	} 
 }
@@ -280,9 +289,11 @@ li > a:hover:before {
 /*  MOVE NAVBAR LINKS */
 
 .navbar .navbar-nav {
-  display: inline-block;
+  /*display: inline-block;*/
   float: none;
   vertical-align: top;
+  background-color:#fff;
+  
 }
 
 .navbar .navbar-collapse {
@@ -319,6 +330,7 @@ p {
     text-align: left;	
 	line-height:2;
 	color:#6e6e6e;
+	font-size:18px;
 }
 
 /*            --------------------           */
@@ -464,7 +476,68 @@ url('./DCBA.ttf') format('truetype');
     border-right: none;
 }
 
-
+@media (max-width: 1100px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-left,.navbar-right {
+        float: none !important;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+		margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+  		display:block !important;
+	}
+}
+/*@media (max-width: 1100px) {
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}*/
 </style>
 </head>
 
@@ -483,8 +556,9 @@ url('./DCBA.ttf') format('truetype');
 	<!--<img class="col-xs-6 col-md-4" style="height:90%;width:90%; opacity:.32; margin-left:0; margin-bottom:0; z-index:-100;" src="./img/icetracefinal.svg" />-->
     <!--</div>-->
  </div>
- <div id="nav-wrapper">
- <nav role="navigation" id="navid" class="navbar navbar-default navreplace">
+  <div id="navbarAffix"> </div>
+ <div id="nav-wrapper" style="height:110px;">
+ <nav style="height:110px; z-index:110;" role="navigation" id="navid" class="navbar navbar-default navreplace" >
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -494,7 +568,7 @@ url('./DCBA.ttf') format('truetype');
                 <span class="icon-bar"></span>
             </button>
 
-            <a href="#" style="margin-top:5px;" class="navbar-brand">C A T H A C K S II</a>
+            <a href="#"  class="navbar-brand">C A T H A C K S II </a>
 
         </div>
         <!-- Collection of nav links and other content for toggling -->
@@ -502,11 +576,11 @@ url('./DCBA.ttf') format('truetype');
 
             <ul class="nav navbar-nav"  >
                <!-- <li class="active"><a href="#">Home</a></li>-->
-                <li id="HOME" style="padding-left:0;"><a href="#home">HOME</a></li>
+                <li id="HOME" ><a href="#home">HOME</a></li>
                 <li id="ABOUT"><a href="#about">ABOUT</a></li>
                 <li id="FAQ"><a href="#faq">FAQ</a></li>
                 <li id="APPLY"><a href="#apply">APPLY</a></li>
-                <li id="SPONSORS" style="padding-right:0;"><a href="#sponsors">SPONSORS</a></li>
+                <li id="SPONSORS" ><a href="#sponsors">SPONSORS</a></li>
 
             </ul>
           
@@ -524,7 +598,7 @@ url('./DCBA.ttf') format('truetype');
         <div class="row">
         <div class = "col-md-1"> </div>
        	 <div class="col-md-6"><h1 style=" display:block;"> A B O U T </h1>
-        	<p> Bitcamp is a place for exploration. You will have 36 hours to delve into your curiosities, learn something new, and make something awesome. With world-class mentors and hundreds of fellow campers, you're in for an amazing time. If you're ready for an adventure, see you by the fire!</p> </div>
+        	<p>Bitcamp is a place for exploration. You will have 36 hours to delve into your curiosities, learn something new, and make something awesome. With world-class mentors and hundreds of fellow campers, you're in for an amazing time. If you're ready for an adventure, see you by the fire!</p> <br></div>
          <div class="col-md-4">
          	        <div class="row">
 
@@ -536,7 +610,6 @@ url('./DCBA.ttf') format('truetype');
                      </div>
 						</div>
          
-        <img src="./img/kentucky.svg" />
          </div>
         </div>
         		<!--<h2 style="display:inline; text-align:center;"> LEXINGTON, KY </h2> <h2 style="display:inline; text-align:center;"> MID NOVEMBER </h2>-->
@@ -558,226 +631,7 @@ url('./DCBA.ttf') format('truetype');
         
         
       
-    <section class="faq">
-	<ul class="categories">
-		<li><a class="selected" href="#basics">Basics</a></li>
-		<li><a href="#mobile">Mobile</a></li>
-		<li><a href="#account">Account</a></li>
-		<li><a href="#payments">Payments</a></li>
-		<li><a href="#privacy">Privacy</a></li>
-		<li><a href="#delivery">Delivery</a></li>
-	</ul> <!-- categories -->
-
-	<div class="faq-items">
-		<ul id="basics" class="faq-group" style="display:block;">
-			<li class="faq-title"><h2>Basics</h2></li>
-			<li>
-				<a class="trigger" href="#0">How do I change my password?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae quidem blanditiis delectus corporis, possimus officia sint sequi ex tenetur id impedit est pariatur iure animi non a ratione reiciendis nihil sed consequatur atque repellendus fugit perspiciatis rerum et. Dolorum consequuntur fugit deleniti, soluta fuga nobis. Ducimus blanditiis velit sit iste delectus obcaecati debitis omnis, assumenda accusamus cumque perferendis eos aut quidem! Aut, totam rerum, cupiditate quae aperiam voluptas rem inventore quas, ex maxime culpa nam soluta labore at amet nihil laborum? Explicabo numquam, sit fugit, voluptatem autem atque quis quam voluptate fugiat earum rem hic, reprehenderit quaerat tempore at. Aperiam.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How do I sign up?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi cupiditate et laudantium esse adipisci consequatur modi possimus accusantium vero atque excepturi nobis in doloremque repudiandae soluta non minus dolore voluptatem enim reiciendis officia voluptates, fuga ullam? Voluptas reiciendis cumque molestiae unde numquam similique quas doloremque non, perferendis doloribus necessitatibus itaque dolorem quam officia atque perspiciatis dolore laudantium dolor voluptatem eligendi? Aliquam nulla unde voluptatum molestiae, eos fugit ullam, consequuntur, saepe voluptas quaerat deleniti. Repellendus magni sint temporibus, accusantium rem commodi?</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">Can I remove a post?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How do reviews work?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-		</ul> <!-- faq-group -->
-
-		<ul id="mobile" class="faq-group">
-			<li class="faq-title"><h2>Mobile</h2></li>
-			<li>
-				<a class="trigger" href="#0">How does syncing work?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How do I upload files from my phone or tablet?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi tempore, placeat quisquam rerum! Eligendi fugit dolorum tenetur modi fuga nisi rerum, autem officiis quaerat quos. Magni quia, quo quibusdam odio. Error magni aperiam amet architecto adipisci aspernatur! Officia, quaerat magni architecto nostrum magnam fuga nihil, ipsum laboriosam similique voluptatibus facilis nobis? Eius non asperiores, nesciunt suscipit veniam blanditiis veritatis provident possimus iusto voluptas, eveniet architecto quidem quos molestias, aperiam eum reprehenderit dolores ad deserunt eos amet. Vero molestiae commodi unde dolor dicta maxime alias, velit, nesciunt cum dolorem, ipsam soluta sint suscipit maiores mollitia assumenda ducimus aperiam neque enim! Quas culpa dolorum ipsam? Ipsum voluptatibus numquam natus? Eligendi explicabo eos, perferendis voluptatibus hic sed ipsam rerum maiores officia! Beatae, molestias!</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How do I link to a file or folder?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-		</ul> <!-- faq-group -->
-
-		<ul id="account" class="faq-group">
-			<li class="faq-title"><h2>Account</h2></li>
-			<li>
-				<a class="trigger" href="#0">How do I change my password?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis earum autem consectetur labore eius tenetur esse, in temporibus sequi cum voluptatem vitae repellat nostrum odio perspiciatis dolores recusandae necessitatibus, unde, deserunt voluptas possimus veniam magni soluta deleniti! Architecto, quidem, totam. Fugit minus odit unde ea cupiditate ab aperiam sed dolore facere nihil laboriosam dolorum repellat deleniti aliquam fugiat laudantium delectus sint iure odio, necessitatibus rem quisquam! Ipsum praesentium quam nisi sint, impedit sapiente facilis laudantium mollitia quae fugiat similique. Dolor maiores aliquid incidunt commodi doloremque rem! Quaerat, debitis voluptatem vero qui enim, sunt reiciendis tempore inventore maxime quasi fugiat accusamus beatae modi voluptates iste officia esse soluta tempora labore quisquam fuga, cum. Sint nemo iste nulla accusamus quam qui quos, vero, minus id. Eius mollitia consequatur fugit nam consequuntur nesciunt illo id quis reprehenderit obcaecati voluptates corrupti, minus! Possimus, perspiciatis!</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How do I delete my account?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo tempore soluta, minus magnam non blanditiis dolore, in nam voluptas nobis minima deserunt deleniti id animi amet, suscipit consequuntur corporis nihil laborum facere temporibus. Qui inventore, doloribus facilis, provident soluta voluptas excepturi perspiciatis fugiat odit vero! Optio assumenda animi at! Assumenda doloremque nemo est sequi eaque, ipsum id, labore rem nisi, amet similique vel autem dolore totam facilis deserunt. Mollitia non ut libero unde accusamus praesentium sint maiores, illo, nemo aliquid?</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How do I change my account settings?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">I forgot my password. How do I reset it?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum at aspernatur iure facere ab a corporis mollitia molestiae quod omnis minima, est labore quidem nobis accusantium ad totam sunt doloremque laudantium impedit similique iste quasi cum! Libero fugit at praesentium vero. Maiores non consequuntur rerum, nemo a qui repellat quibusdam architecto voluptatem? Sequi, possimus, cupiditate autem soluta ipsa rerum officiis cum libero delectus explicabo facilis, odit ullam aperiam reprehenderit! Vero ad non harum veritatis tempore beatae possimus, ex odio quo.</p>
-				</div> <!-- faq-content -->
-			</li>
-		</ul> <!-- faq-group -->
-
-		<ul id="payments" class="faq-group">
-			<li class="faq-title"><h2>Payments</h2></li>
-			<li>
-				<a class="trigger" href="#0">Can I have an invoice for my subscription?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">Why did my credit card or PayPal payment fail?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur accusantium dolorem vel, ad, nostrum natus eos, nemo placeat quos nisi architecto rem dolorum amet consectetur molestiae reprehenderit cum harum commodi beatae necessitatibus. Mollitia a nostrum enim earum minima doloribus illum autem, provident vero et, aspernatur quae sunt illo dolorem. Corporis blanditiis, unde, neque, adipisci debitis quas ullam accusantium repudiandae eum nostrum quis! Velit esse harum qui, modi ratione debitis alias laboriosam minus eaque, quod, itaque labore illo totam aut quia fuga nemo. Perferendis ipsa laborum atque assumenda tempore aspernatur a eos harum non id commodi excepturi quaerat ullam, explicabo, incidunt ipsam, accusantium quo magni ut! Ratione, magnam. Delectus nesciunt impedit praesentium sed, aliquam architecto dolores quae, distinctio consectetur obcaecati esse, consequuntur vel sit quis blanditiis possimus dolorum. Eaque architecto doloremque aliquid quae cumque, vitae perferendis enim, iure fugiat, soluta aut!</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">Why does my bank statement show multiple charges for one upgrade?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-		</ul> <!-- faq-group -->
-
-		<ul id="privacy" class="faq-group">
-			<li class="faq-title"><h2>Privacy</h2></li>
-			<li>
-				<a class="trigger" href="#0">Can I specify my own private key?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">My files are missing! How do I get them back?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How can I access my account data?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus magni vero deserunt enim et quia in aliquam, rem tempore voluptas illo nisi veritatis quas quod placeat ipsa! Error qui harum accusamus incidunt at libero ipsum, suscipit dolorum esse explicabo in eius voluptates quidem voluptatem inventore amet eaque deserunt veniam dignissimos excepturi? Dolore, quo amet nostrum autem nemo. Sit nam assumenda, corporis ea sunt distinctio nostrum doloribus alias, beatae nesciunt dolore saepe consequuntur minima eveniet porro dolor officiis maiores ab obcaecati officia enim aliquam. Itaque fuga molestiae hic accusantium atque corporis quia id sequi enim vero? Hic aperiam sint facilis aliquam quia, accusamus tenetur earum totam enim est, error. Iusto, reiciendis necessitatibus molestias. Voluptatibus eos explicabo repellat nesciunt nam vero minima.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How can I control if other search engines can link to my profile?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-		</ul> <!-- faq-group -->
-
-		<ul id="delivery" class="faq-group">
-			<li class="faq-title"><h2>Delivery</h2></li>
-			<li>
-				<a class="trigger" href="#0">What should I do if my order hasn't been delivered yet?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How can I find your international delivery information?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">Who takes care of shipping?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How do returns or refunds work?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quidem delectus rerum eligendi mollitia, repudiandae quae beatae. Et repellat quam atque corrupti iusto architecto impedit explicabo repudiandae qui similique aut iure ipsum quis inventore nulla error aliquid alias quia dolorem dolore, odio excepturi veniam odit veritatis. Quo iure magnam, et cum. Laudantium, eaque non? Tempore nihil corporis cumque dolor ipsum accusamus sapiente aliquid quis ea assumenda deserunt praesentium voluptatibus, accusantium a mollitia necessitatibus nostrum voluptatem numquam modi ab, sint rem.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How do I use shipping profiles?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How does your UK Next Day Delivery service work?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">How does your Next Day Delivery service work?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">When will my order arrive?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-
-			<li>
-				<a class="trigger" href="#0">When will my order ship?</a>
-				<div class="faq-content">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis provident officiis, reprehenderit numquam. Praesentium veritatis eos tenetur magni debitis inventore fugit, magnam, reiciendis, saepe obcaecati ex vero quaerat distinctio velit.</p>
-				</div> <!-- faq-content -->
-			</li>
-		</ul> <!-- faq-group -->
-	</div> <!-- faq-items -->
-	<a href="#0" class="cd-close-panel">Close</a>
-</section> <!-- faq -->
+   
         
         
         
@@ -854,12 +708,46 @@ url('./DCBA.ttf') format('truetype');
 });*/
 
 
+$(document).ready(function(){
+	calculateHomeSize();
+	affix();
 
-var $navheight = $("#about").height()-$("#home").height();
-var $navheight2 = $("#about").height()-$("#home").height();
+});
+
+$(document).scroll(function() {
+	affix();
+});
+function calculateHomeSize() {
+	if (window.innerWidth <= 767) {
+        $('#home').css('height', window.innerHeight);
+    } else {
+        $('#home').css('height', window.innerHeight - $('#nav-wrapper').height());
+    }
+}
+
+function affix() {
+	if ($(window).scrollTop() > $('#navbarAffix').position().top) {
+        $('#navid').addClass('navbar-fixed-top');
+    } else {
+        $('#navid').removeClass('navbar-fixed-top');
+    }	
+}
+
+$(window).resize(function() {
+    var viewportWidth = $(window).width();
+	calculateHomeSize();
+
+		//$('#nav-wrapper').height($("#navid").height());
+//$("#nav-wrapper").css({"min-height":$("#navid").height()+"px"});
+
+});
+
+
+/*var $navheight = $("#about").height()-$("#home").height();
 
 $('#navid').affix({
     offset: { top: $('#navid').offset().top }
+
 });
 
 $(".navbar-nav li a").css({"line-height":$navheight+"px"});
@@ -867,11 +755,10 @@ $(".navbar-nav li a").css({"height":$navheight+"px"});
 $(".navbar-nav li a").css({"padding-top":"0px"});
 
 
-$(".navbar-brand").css({"line-height":$navheight2+"px"});
-$(".navbar-brand").css({"height":$navheight2+"px"});
-$(".navbar-brand").css({"padding-top":"0px"});
+$(".navbar-brand").css({"line-height":$navheight+"px"});
+$(".navbar-brand").css({"height":$navheight+"px"});
+$(".navbar-brand").css({"padding-top":"0px"});*/
 
-$('#nav-wrapper').height($("#navid").height());
 
 
 <!--$(".navbar-brand").css({"line-height":$navheight+"px; height":$navheight+"px; padding-top:0;" } );-->
@@ -908,6 +795,7 @@ $("#SPONSORS").click(function(e) {
         scrollTop: $("#sponsors").offset().top
     }, 1000);
 });
+
 
 
 
@@ -1022,50 +910,7 @@ particlesJS("home", {
   "retina_detect": true
 });
 
-<!--$('#navid').singlePageNav();-->
-//$(document).ready().getElementById
-//document.getElementsByClassName('current').focus();
 
-/*$(document).ready(function(){
-	var $navheight = $("#about").height()-$("#home").height();
-  // $sections incleudes all of the container divs that relate to menu items.
-  var $sections = $('.container');
-  
-  // The user scrolls
-  $(window).scroll(function(){
-    
-    // currentScroll is the number of pixels the window has been scrolled
-    var currentScroll = $(this).scrollTop();
-    
-    // $currentSection is somewhere to place the section we must be looking at
-    var $currentSection
-    
-    // We check the position of each of the divs compared to the windows scroll positon
-    $sections.each(function(){
-      // divPosition is the position down the page in px of the current section we are testing      
-      var divPosition = $(this).offset().top - $(this).height() + $navheight;
-      
-      // If the divPosition is less the the currentScroll position the div we are testing has moved above the window edge.
-      // the -1 is so that it includes the div 1px before the div leave the top of the window.
-      if( divPosition - 1 < currentScroll  ){
-        // We have either read the section or are currently reading the section so we'll call it our current section
-        $currentSection = $(this);
-        
-        // If the next div has also been read or we are currently reading it we will overwrite this value again. This will leave us with the LAST div that passed.
-      }
-      
-      // This is the bit of code that uses the currentSection as its source of ID
-      var id = $currentSection.attr('id');
-   	 $('a').removeClass('active');
-	 var idCaps = id.toLowerCase();
-	 console.log(idCaps);
-   	 $("[href=#"+idCaps+"]").addClass('active');
-     //$("#"+idCaps).trigger('mouseover');
-
-    })
-
-  });
-});*/
 </script>
 
 
