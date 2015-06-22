@@ -140,6 +140,7 @@ html, body {
 	margin-bottom:0px;
 }
 
+
 #mydiv {
 	position:absolute;
 	top: 35%;
@@ -301,7 +302,7 @@ li > a:hover:before {
 /*  MOVE NAVBAR LINKS */
 
 .navbar .navbar-nav {
-  /*display: inline-block;*/
+  display: inline-block;
   float: none;
   vertical-align: top;
   background-color:#fff;
@@ -486,12 +487,23 @@ url('./DCBA.ttf') format('truetype');
 	}
 	
 }
+.navbar-brand {
+display:none;	
+
+}
+
+@media screen and (max-width: 768px){
+	.navbar-brand{
+		display:block;	
+		
+	}
+}
 
 #breadcrumbs a:last-child {
     border-right: none;
 }
 
-@media (max-width: 1100px) {
+/*@media (max-width: 1100px) {
     .navbar-header {
         float: none;
     }
@@ -527,7 +539,7 @@ url('./DCBA.ttf') format('truetype');
   		display:block !important;
 	}
 }
-
+*/
 @media screen and (max-width: 992px) {
 	.kentucky{
 		display:none;
@@ -543,10 +555,21 @@ url('./DCBA.ttf') format('truetype');
 	
 }
 
+@media screen and (max-width:320px) {
+	#mydiv{
+	    background-size: 262px 262px;
+		background-position: top center;
+
+	}
+	
+}
+
+
 .footer {
 	height:400px;
 	background-color:#fff;	
 }
+
 
 </style>
 </head>
