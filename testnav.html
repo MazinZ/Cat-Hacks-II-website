@@ -22,6 +22,7 @@ html, body {
 			list-style-type: none !important;
 
     }
+body{   position: relative; }
 #home {
 	height:85%;	
 	margin:0;
@@ -299,6 +300,8 @@ li > a:hover:before {
   transform: scaleX(1);
 }
 
+
+
 /*  MOVE NAVBAR LINKS */
 
 .navbar .navbar-nav {
@@ -456,9 +459,6 @@ url('./DCBA.ttf') format('truetype');
   background: #b9b9b9; /* Gecko Browsers */
 }
 
-.active {
-	background-color: #508dad;
-}
 
 #breadcrumbs {
     margin: 0em;
@@ -497,6 +497,7 @@ display:none;
 		display:block;	
 		
 	}
+	
 }
 
 #breadcrumbs a:last-child {
@@ -565,16 +566,64 @@ display:none;
 }
 
 
-.footer {
-	height:400px;
-	background-color:#fff;	
+
+
+#footerTextbox{
+	font-size:14px;
+	color:#a6a6a6;
+	text-align:center;
+	
 }
+
+/*.footer {
+	height:200px;
+	position:relative;
+    background: url(./img/footerright.svg) 120% 20px no-repeat, url(./img/footerleft.svg) -25% 20px no-repeat;
+	background-color:#fff;
+	background-size:50%;
+	overflow:hidden;
+}
+
+@media screen and (max-width:768){
+	.footer {
+		background:#fff;	
+	}	
+	
+}*/
+
+
+
+
+.navbar-nav > .active > a{
+	background-color:#fff;
+	
+}
+.active:after {
+     content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #508dad;
+  visibility: visible;
+  transition: width 2s;
+  -webkit-animation: widen .5s 1;
+  animation: widen 5.s 1;
+}
+
+@-webkit-keyframes widen {
+    0%   { width:0%; /* Google Chrome & Webkit Nightlies */}
+    100% { width:100%;/* Google Chrome & Webkit Nightlies */ }
+}
+
 
 
 </style>
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navid" data-offset="110">
+
  	
  <div id="home" class="container"  >
   <div id="HOME-breakpoint"> </div>
@@ -654,6 +703,8 @@ display:none;
     
     
     <div id="faq" class="container">
+           	<div id="FAQ-breakpoint"> </div>
+
       <!--FAQ-->
     	<div class = "center" style="width:80%; height:80%;">
         <h1> F A Q </h1>
@@ -681,7 +732,6 @@ display:none;
         
         
         </div>
-       	<div id="FAQ-breakpoint"> </div>
 
     </div> <!-- FAQ END -->
 
@@ -736,8 +786,12 @@ display:none;
 	
    <footer class="footer">
       <div class="container">
-
       </div>
+
+	<div class="span6 offset3" id="footerTextbox"> 
+     &copy; University of Kentucky ACM
+        
+    </div>
     </footer>
     
     <script>
@@ -765,6 +819,7 @@ $(document).ready(function(){
 
 $(document).scroll(function() {
 	affix();
+	navLinkState();
 });
 function calculateHomeSize() {
 	if (window.innerWidth <= 767) {
@@ -772,6 +827,7 @@ function calculateHomeSize() {
     } else {
         $('#home').css('height', window.innerHeight - $('#nav-wrapper').height());
     }
+	
 }
 
 function affix() {
@@ -791,79 +847,39 @@ $(window).resize(function() {
 
 });
 
-
-/*var $navheight = $("#about").height()-$("#home").height();
-
-$('#navid').affix({
-    offset: { top: $('#navid').offset().top }
-
-});
-
-$(".navbar-nav li a").css({"line-height":$navheight+"px"});
-$(".navbar-nav li a").css({"height":$navheight+"px"});
-$(".navbar-nav li a").css({"padding-top":"0px"});
-
-
-$(".navbar-brand").css({"line-height":$navheight+"px"});
-$(".navbar-brand").css({"height":$navheight+"px"});
-$(".navbar-brand").css({"padding-top":"0px"});*/
-
-
-
-<!--$(".navbar-brand").css({"line-height":$navheight+"px; height":$navheight+"px; padding-top:0;" } );-->
-
-
-
-/*$("#HOME").click(function(e) {
-	e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $("#home").offset().top
-    }, 1000);
-});
-$("#ABOUT").click(function(e) {
-	 e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $("#about").offset().top  // Made all of these their own onclick function because of this one <----
-    }, 1000);
-});
-$("#APPLY").click(function(e) {
-	 e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $("#apply").offset().top
-    }, 1000);
-});
-$("#FAQ").click(function(e) {
-	 e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $("#faq").offset().top
-    }, 1000);
-});
-$("#SPONSORS").click(function(e) {
-	 e.preventDefault();
-    $('html, body').animate({
-        scrollTop: $("#sponsors").offset().top
-    }, 1000);
-});*/
+function navLinkState() {
+	var sections = $('container')
+  , nav = $('nav')
+  , nav_height = nav.outerHeight();
+ 
+$(window).on('scroll', function () {
+  var cur_pos = $(this).scrollTop();
+ 
+  sections.each(function() {
+    var top = $(this).offset().top,
+        bottom = ('#sponsor').offset().top;
+ 
+    if (cur_pos >= top && cur_pos <= bottom) {
+      nav.find('a').removeClass('active');
+      sections.removeClass('active');
+ 
+      $(this).addClass('active');
+      nav.find('a[href="#'+$(this).attr('id').toUpperCase()+'"]').addClass('active');
+	  console.log($(this).attr('id'));
+    }
+  });
+});	
+	
+	
+}
 
 $("#navid li").click(function(e) {
 	e.preventDefault();
 		var idName = "#" + $(this).attr('id').toLowerCase();
 	$('html, body').animate({
-		scrollTop: $(idName).offset().top
+		scrollTop: $(idName).offset().top -110
 	}, 1000);
 });
-
-/*$("#navid li").click(function(e) {
-	e.preventDefault();
-	//$('html, body').animate({
-		//scrollTop: $(
-		var idName = "#" + $(this).attr('id') + "-breakpoint";
-	$('html, body').animate({
-		scrollTop: $(idName).offset().top - 110
-	}, 1000);
-});*/
-
-
 
 particlesJS("home", {
   "particles": {

@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Untitled Document</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./bootstrap/js/bootstrap.js"></script>
+
+<script src="./js/jquery.singlePageNav.min.js"></script>
+<script src="./particles.min.js"></script>
+<script src="./js/faq.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+<style>
+html, body {
+        height: 100%;
+        margin: 0px;
+			list-style-type: none !important;
+		
+
+    }
+#home {
+	height:85%;	
+	margin:0;
+	background-color:#fff; /*efefef*/
+	width:100%;
+	position:relative;
+	
+	 -moz-user-select: none; 
+        -khtml-user-select: none; 
+        -webkit-user-select: none; 
+        -o-user-select: none; 
+}
+#about {
+	margin:0;
+	background-color:#fff;
+	width:100%;
+	position:relative;
+	 min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+/*       For navbar animation         */
+
+li > a {
+  position: relative;
+  text-decoration: none;
+}
+
+
+li > a:before {
+   content: "";
+  position: absolute;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #508dad;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+li > a:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+@media (min-width: 768px) {
+	li > a:before {
+	  width: 100%;
+	}
+#navbarid li {
+	display:inline-block;
+	width:20% !important;
+	height:16px;
+	float:left;
+	text-align:center;
+	position:relative;
+	padding-left:40px;
+	padding-right:40px;
+	line-height:110px !important;
+	
+}
+
+#navid {
+	padding:0;
+	height:16px;
+	
+	
+}
+.container{
+	
+}
+.navbar-right{
+		padding:50px;
+}
+.navbar-left{
+	padding:50px;	
+}
+
+.navreplace {
+	background-color:#fff;
+	height:110px;
+}
+	
+}
+
+	@font-face {
+font-family: 'DCB';
+src: 
+url('./DCB.ttf') format('truetype');
+
+}
+
+.navbar-brand{
+	font-size:38px;
+	-webkit-font-smoothing: antialiased !important;
+	font-family: DINCondensed-Bold, sans-serif;
+	color:#508dad !important;
+	line-height:110px;
+	height:110px;
+	padding-top:0px;
+	
+}
+
+</style>
+</head>
+
+<body>
+
+<div id="home">
+</div>
+
+ <div id="navbarAffix"> </div>
+ <div id="nav-wrapper" style="height:110px;">
+ <nav style="height:110px; z-index:110;" role="navigation" id="navid" class="navbar navbar-default navreplace navbar-static-top" >
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+        <div class="navbar-header">
+        
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a href="#"  class="navbar-brand">C A T H A C K S II </a>
+
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul id="navbarid" class="nav navbar-nav"  >
+               <!-- <li class="active"><a href="#">Home</a></li>-->
+                <li id="HOME" ><a href="#home">HOME</a></li>
+                <li id="ABOUT"><a href="#about">ABOUT</a></li>
+                <li id="FAQ"><a href="#faq">FAQ</a></li>
+                <li id="APPLY"><a href="#apply">APPLY</a></li>
+                <li id="SPONSORS"><a href="#sponsors">SPONSORS</a></li>
+
+            </ul>
+        </div>
+        </div>
+    </nav>
+ </div>
+ 
+ <div id="about">
+ </div>
+
+
+<div id="about">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+$(document).ready(function(){
+	calculateHomeSize();
+	affix();
+
+});
+
+$(document).scroll(function() {
+	affix();
+});
+function calculateHomeSize() {
+	if (window.innerWidth <= 767) {
+        $('#home').css('height', window.innerHeight);
+    } else {
+        $('#home').css('height', window.innerHeight - $('#nav-wrapper').height());
+    }
+}
+
+function affix() {
+	if ($(window).scrollTop() > $('#navbarAffix').position().top) {
+        $('#navid').addClass('navbar-fixed-top');
+    } else {
+        $('#navid').removeClass('navbar-fixed-top');
+    }	
+}
+
+</script>
+</body>
+</html>
