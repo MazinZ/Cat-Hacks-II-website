@@ -1,0 +1,341 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="./animate.css">
+
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<style>
+@font-face {
+font-family: 'DCBA';
+src: 
+url('./DCBA.ttf') format('truetype');
+
+}
+h1 {
+	font-size:65px;
+	-webkit-font-smoothing: antialiased;
+	font-family: DINCondensed-Bold, sans-serif;
+	line-height: .3 !important;
+	color:#508dad !important;
+
+}
+
+
+p {  
+	font-family: "Aleo", Georgia, Serif;
+  	font-weight: 400;
+    text-align: left;	
+	line-height:1.6;
+	color:#6e6e6e;
+	font-size:18px;
+}
+/*.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear forwards;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}*/
+polygon{
+
+    pointer-events:all;
+}
+polygon:hover{
+	    opacity: 0.0;	
+
+    
+}
+circle:hover{
+	   fill-opacity: 0.0;	
+
+    
+}
+g:hover{
+opacity:0.0;	
+}
+object:hover circle{
+	    fill-opacity: 0.0;	
+}
+.kentucky polygon:hover {
+    fill: #fce57e;
+}
+
+ circle:hover
+  {
+    opacity: 0.1;
+  }
+
+/*.center {
+       position: absolute;
+       top: 0;
+       left: 0;
+       bottom: 0;
+       right: 0;
+       margin: auto;
+	   text-align:center;
+  }*/
+ 
+#mainTextbox {
+	width:600px;
+}
+.h1Header{
+	width:100%;
+	border: solid #dcdcdc;
+	border-width: 0 0 1px 0;
+	padding-bottom:32px;
+	
+}
+
+.block {
+  text-align: center;
+}
+ 
+.block:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+/* The element to be centered, can also be of any width and height */ 
+.centered {
+  display: inline-block;
+  vertical-align: middle;
+  width: 570px;
+}
+
+#about {
+	margin:0;
+	background-color:#fff;
+	width:100%;
+	position:relative;
+	 min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+}
+
+#apply {
+	height:100%;	
+	margin:0;
+	background-color:#efefef;
+	width:100%;
+	position:relative;
+
+}
+
+#faq {
+	height:100%;	
+	margin:0;
+	background-color:#fff;
+	width:100%;
+	position:relative;
+	
+	
+
+}
+
+/* apply section button */
+
+
+.hvr-shutter-out-vertical {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  background: #efefef;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+    border: solid #5c8caa;
+	border-width: 2px 0;
+	color:#5c8caa;
+  
+}
+.hvr-shutter-out-vertical:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #5c8caa;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-shutter-out-vertical:hover, .hvr-shutter-out-vertical:focus, .hvr-shutter-out-vertical:active {
+  color: white;
+}
+.hvr-shutter-out-vertical:hover:before, .hvr-shutter-out-vertical:focus:before, .hvr-shutter-out-vertical:active:before {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+.appSectionButton {
+	width:200px;
+	height:80px;
+	line-height:85px;
+	text-align:center;
+	font-size:20px;
+	-webkit-font-smoothing: antialiased;
+	font-family: DINCondensed-Bold, sans-serif;
+	cursor: pointer;
+
+}
+
+.horizontalcenter{
+	margin-left:auto;
+	margin-right:auto;	
+	
+}
+.closebtn {
+	width:60px;
+	height:60px;	
+	display:block;
+	-webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    cursor: pointer;
+	margin-top:2px;
+	
+}
+.closebtn:hover {
+	transform:rotate(90deg);
+}
+
+/*                      */
+
+/*         Typeform              */
+
+		/*html{
+			margin: 0;
+			height: 100%;
+			overflow: hidden;
+		}*/
+		iframe{
+			position: absolute;
+			left:0;
+			right:0;
+			bottom:0;
+			top:0;
+			border:0;
+		}
+    
+/*                        */
+
+#animatedModal{
+    width: 100%;
+    height:100%;
+    position:relative;
+}
+
+.close-animatedModal{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:40px;
+	background-color:#508dad;
+	z-index:1000;
+}
+</style>
+</head>
+
+<body>
+<div id="about">
+	<div class="block" style="height: 800px;">
+
+<div class = "centered" >
+	<h1 class="h1Header"> A B O U T </h1>
+    <p>Bitcamp is a place for exploration. You will have 36 hours to delve into your curiosities, learn something new, and make something awesome. With world-class mentors and hundreds of fellow campers, you're in for an amazing time. If you're ready for an adventure, see you by the fire!</p> 
+       <!--  <img style="width:500px; height:300px;" class = "kentucky" src="./img/kentucky.svg" />-->
+        <object width="500" height="300" data="./img/kentucky.svg" type="image/svg+xml"></object>
+
+
+</div>
+	</div>
+    </div>
+    
+    <div id="faq">
+    <div class="block" style="height: 800px;">
+
+<div class = "centered" >
+	<h1 class="h1Header"> F A Q </h1>
+    <!--<p>Bitcamp is a place for exploration. You will have 36 hours to delve into your curiosities, learn something new, and make something awesome. With world-class mentors and hundreds of fellow campers, you're in for an amazing time. If you're ready for an adventure, see you by the fire!</p> 
+         <img style="width:500px; height:250px;" class = "kentucky" src="./img/kentucky.svg" />-->
+
+</div>
+	</div>
+	</div>
+    
+       <div id="apply">
+    <div class="block" style="height: 800px;">
+
+<div class = "centered" >
+	<h1 class="h1Header"> A P P L Y </h1>
+    <div class="horizontalcenter">
+    <div id="applybutton" class="hvr-shutter-out-vertical appSectionButton" href="#animatedModal" style="margin-right:10px;">
+A P P L Y
+</div>
+<div class="hvr-shutter-out-vertical appSectionButton" style="margin-left:10px;">
+S P O N S O R
+</div>
+</div>
+</div>
+	</div>
+	</div>
+ 
+ <div id="animatedModal">
+        <!--THIS IS IMPORTANT! to close the modal, the class name has to match the name given on the ID  class="close-animatedModal" -->
+        <div class="close-animatedModal"> 
+        	<img src="img/closebt.svg" class="horizontalcenter closebtn" />
+        </div>
+            
+        <div class="modal-content">
+        <iframe id="typeform-full" width="100%" height="100%" frameborder="0" src="https://cathacks.typeform.com/to/M2SNCi"></iframe>
+		<script type="text/javascript" src="https://s3-eu-west-1.amazonaws.com/share.typeform.com/embed.js"></script>
+                  <!--Your modal content goes here-->
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+
+  <script src="./js/animatedModal.min.js"></script>
+<script>
+    $("#applybutton").animatedModal({
+        animatedIn:'slideInUp',
+        animatedOut:'slideOutDown',
+        color:'#fff',
+		overflow:'hidden',
+        
+    });</script>
+</body>
+</html>
+
+
+	
+
+	
+

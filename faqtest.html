@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Untitled Document</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="./bootstrap/js/bootstrap.js"></script>
+
+<script src="./js/jquery.singlePageNav.min.js"></script>
+<script src="./particles.min.js"></script>
+<script src="./js/faq.js"></script>
+
+    <link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="./css/faq.css">
+</head>
+
+<body>
+
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">test</div>
+    <div role="tabpanel" class="tab-pane" id="profile">.safdsf</div>
+    <div role="tabpanel" class="tab-pane" id="messages">.sffsf..</div>
+    <div role="tabpanel" class="tab-pane" id="settings">..ffewfew.</div>
+  </div>
+
+</div>
+<script>
+$('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+</body>
+</html>

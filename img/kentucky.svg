@@ -2,6 +2,23 @@
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 487 297" enable-background="new 0 0 487 297" xml:space="preserve">
+	 <style>
+  polygon:hover
+  {
+    opacity: 0.3;
+  }
+ .path {
+  stroke-dasharray: 100;
+  animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
+	</style>
+
 <g opacity="0.54">
 	<g opacity="0.63">
 		<defs>
@@ -433,7 +450,7 @@
 			<polygon fill="#8A898E" points="328.6,289.6 344.3,240.6 378,273.4 			"/>
 		</g>
 	</g>
-	<line opacity="0.51" fill="none" stroke="#1D1A25" stroke-miterlimit="10" x1="111.7" y1="287.5" x2="434.4" y2="225.7"/>
+	<line class="path" opacity="0.51" fill="none" stroke="#1D1A25" stroke-miterlimit="10" x1="111.7" y1="287.5" x2="434.4" y2="225.7"/>
 	<path fill="none" stroke="#535258" stroke-miterlimit="10" d="M416.8,253.2"/>
 	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="362,226.1 259.3,243.2 207.8,228.2 	"/>
 	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="202.8,203.9 233.7,208.1 259.3,245.6 	"/>
@@ -449,15 +466,15 @@
 	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="434.4,226.1 362,226.1 370.8,149.6 418.1,186.5 
 		380.7,106.8 466.8,176.2 434.4,226.1 418.1,186.5 466.8,176.2 	"/>
 	<line fill="none" stroke="#535258" stroke-miterlimit="10" x1="150.5" y1="238" x2="209.9" y2="252.3"/>
-	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="466.8,176.2 463.1,139.5 439.1,79.1 439.7,134.1 
+	<polyline class="path"  fill="none" stroke="#535258" stroke-miterlimit="10" points="466.8,176.2 463.1,139.5 439.1,79.1 439.7,134.1 
 		466.8,178.5 	"/>
 	<line fill="none" stroke="#535258" stroke-miterlimit="10" x1="360.6" y1="226" x2="418.1" y2="186.5"/>
-	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="363.5,228.2 299.9,187.7 370.8,151.3 380.7,106.8 
+	<polyline class="path" fill="none" stroke="#535258" stroke-miterlimit="10" points="363.5,228.2 299.9,187.7 370.8,151.3 380.7,106.8 
 		386.9,54.6 439.7,136.2 	"/>
-	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="370.8,151.3 320.9,65.2 336.6,138.2 302.7,183.2 
+	<polyline class="path" fill="none" stroke="#535258" stroke-miterlimit="10" points="370.8,151.3 320.9,65.2 336.6,138.2 302.7,183.2 
 		239.1,203.9 207.8,228.2 	"/>
-	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="19.3,217.7 21.8,146.6 38.1,128.8 19.3,222.4 	"/>
-	<polygon fill="none" stroke="#535258" stroke-miterlimit="10" points="40.3,128.8 154.4,89.3 165.2,105.7 	"/>
+	<polyline class="path" fill="none" stroke="#535258" stroke-miterlimit="10" points="19.3,217.7 21.8,146.6 38.1,128.8 19.3,222.4 	"/>
+	<polygon class="path" fill="none" stroke="#535258" stroke-miterlimit="10" points="40.3,128.8 154.4,89.3 165.2,105.7 	"/>
 	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="40.3,131.8 66,194.2 165.2,105.7 205.3,158.5 279.2,113.7 
 		260.1,185.4 	"/>
 	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="336.6,138.2 307.4,136.6 287.1,178.5 336.6,138.2 	"/>
@@ -468,7 +485,7 @@
 		165.2,105.7 274.2,90.3 255.4,77.1 245.7,72.1 281.1,20.4 255.4,77.1 	"/>
 	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="152,238.8 203.5,160.7 206.8,204.7 207.8,230.4 	"/>
 	<path fill="none" stroke="#535258" stroke-miterlimit="10" d="M112.5,285.9"/>
-	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="275.8,90.3 281.1,22 319.6,66 304.6,5.4 332.6,18.9 
+	<polyline class="path" fill="none" stroke="#535258" stroke-miterlimit="10" points="275.8,90.3 281.1,22 319.6,66 304.6,5.4 332.6,18.9 
 		360.3,14 340,33.3 	"/>
 	<polygon fill="none" stroke="#535258" stroke-miterlimit="10" points="386.9,54.6 362.8,15.4 438.1,77.7 	"/>
 	<polyline fill="none" stroke="#535258" stroke-miterlimit="10" points="422.3,64.7 466.8,86.2 453,114 	"/>
