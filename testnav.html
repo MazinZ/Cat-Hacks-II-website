@@ -22,7 +22,6 @@ html, body {
 			list-style-type: none !important;
 
     }
-body{   position: relative; }
 #home {
 	height:85%;	
 	margin:0;
@@ -727,7 +726,7 @@ display:none;
 
             <ul class="nav navbar-nav"  >
                <!-- <li class="active"><a href="#">Home</a></li>-->
-                <li id="HOME" ><a href="#home">HOME</a></li>
+                <li id="HOME" class="active" ><a href="#home">HOME</a></li>
                 <li id="ABOUT"><a href="#about">ABOUT</a></li>
                 <li id="FAQ"><a href="#faq">FAQ</a></li>
                 <li id="APPLY"><a href="#apply">APPLY</a></li>
@@ -1078,8 +1077,7 @@ $(window).on('scroll', function () {
  
   sections.each(function() {
     var top = $(this).offset().top,
-        bottom = ('#sponsor').offset().top;
- 
+        bottom = ('#sponsors').offset().top;
     if (cur_pos >= top && cur_pos <= bottom) {
       nav.find('a').removeClass('active');
       sections.removeClass('active');
