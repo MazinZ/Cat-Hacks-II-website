@@ -4,6 +4,15 @@
 /*
 	CatHacks II theme by Mazin Zakaria
 */
+@-moz-document url-prefix() {
+	h1 {
+	font-family: "BebasNeueRegular", sans-serif !important;
+	}
+	strong{
+	letter-spacing:1px;
+	}
+
+}
 
 @font-face {
    font-family: 'BebasNeueBook';
