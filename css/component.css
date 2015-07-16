@@ -114,7 +114,7 @@
 /* Content */
 .content section {
 	font-size: 1.25em;
-	padding: 3em 1em;
+	padding: 3em 3em 0em 3em;
 	display: none;
 	max-width: 1230px;
 	margin: 0 auto;

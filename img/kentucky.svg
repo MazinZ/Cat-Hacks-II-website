@@ -9,6 +9,8 @@
   }
  .path {
   stroke-dasharray: 100;
+  -webkit-animation: dash 20s linear infinite;
+
   animation: dash 20s linear infinite;
 }
 
