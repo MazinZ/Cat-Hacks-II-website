@@ -323,6 +323,12 @@ object:hover circle{
 	margin-right:auto;	
 	
 }
+.horizontalcenter p{
+	text-align:center !important;	
+}
+
+
+
 .closebtn {
 	width:60px;
 	height:60px;	
@@ -395,6 +401,19 @@ object:hover circle{
 	
 }
 
+#applyDiv{
+  height:175px;
+  width: 570px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  text-align:center;
+	
+	
+}
 
 @media (max-width: 768px) {
 	.kypicture{
@@ -407,9 +426,15 @@ object:hover circle{
 	#contentDiv {
 		width:400px;
 	}
+	#applyDiv {
+		width:400px;
+	}
 	.appSectionButton{
 		margin:0 !important;
 		margin-bottom:20px !important;	
+	}
+	#applyDiv{
+		height:275px;	
 	}
 	
 }
@@ -418,6 +443,9 @@ object:hover circle{
 		width:300px;
 	}
 	#contentDiv {
+		width:300px;
+	}
+	#applyDiv {
 		width:300px;
 	}
 	.kypicture{
@@ -441,7 +469,12 @@ object:hover circle{
 	#contentDiv {
 		width:200px;
 	}
-	
+	#applyDiv {
+		width:200px;
+	}
+	#applyDiv h1{
+		font-size:50px;
+	}
 	#contentDiv h1{
 		font-size:50px;
 			
@@ -461,10 +494,14 @@ object:hover circle{
 		display:none;
 	}
 	.centered h1{
-		font-size:35px;
-			
+		font-size:35px;	
 	}
-	
+	#applyDiv {
+		width:100px;
+	}
+	#applyDiv h1 {
+		font-size:35px;
+	}
 	#contentDiv {
 		width:100px;
 	}
@@ -514,8 +551,8 @@ object:hover circle{
 	font-family: "BebasNeueBold", sans-serif;
 	color:#508dad !important;
 	padding-left:15%;
-	line-height:110px;
-	height:110px;
+	line-height:100px;
+	height:100px;
 	padding-top:0px;
 	
 }
@@ -534,8 +571,8 @@ object:hover circle{
 	color:#508dad !important;
 	font-family:"Ancillary", sans-serif;
 	font-weight:300;
-	line-height:110px;
-	height:110px;
+	line-height:100px;
+	height:100px;
 	padding-top:0px;
 
 }
@@ -668,6 +705,9 @@ display:none;
   visibility: visible;
   transition: width 2s;
   -webkit-animation: widen .5s 1;
+  -moz-animation: widen .5s 1;
+  -ms-animation: widen .5s 1;
+  -o-animation: widen .5s 1;
   animation: widen 5.s 1;
 }
 
@@ -675,14 +715,23 @@ display:none;
     0%   { width:0%; /* Google Chrome & Webkit Nightlies */}
     100% { width:100%;/* Google Chrome & Webkit Nightlies */ }
 }
+@-moz-keyframes widen {
+    0%   { width:0%; }
+    100% { width:100%; }
+}
+@-ms-keyframes widen {
+    0%   { width:0%; }
+    100% { width:100%; }
+}
+@keyframes widen {
+    0%   { width:0%; }
+    100% { width:100%; }
+}
 /*                            */
-
-
-
 
 #cathacks2logo{
 	width:311px;
-	height:311px;	
+	height:430px;	
 	
 }
 @media screen and (max-width: 325px){

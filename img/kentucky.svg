@@ -19,6 +19,12 @@
     stroke-dashoffset: 1000;
   }
 }
+
+@-webkit-keyframes dash {
+  to {
+    stroke-dashoffset: 1000;
+  }
+}
 	</style>
 
 <g opacity="0.54">
