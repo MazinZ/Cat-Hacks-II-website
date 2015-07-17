@@ -780,3 +780,31 @@ display:none;
 ::-moz-selection {
   background: #b9b9b9; /* Gecko Browsers */
 }
+
+
+@-webkit-keyframes fadeInDownLogo { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        -webkit-transform: translateY(0); 
+    } 
+} 
+
+@keyframes fadeInDownLogo { 
+    0% { 
+        opacity: 0; 
+        transform: translateY(-20px); 
+    } 
+    100% { 
+        opacity: 1; 
+        transform: translateY(0); 
+    } 
+} 
+
+.fadeInDown { 
+    -webkit-animation-name: fadeInDownLogo; 
+    animation-name: fadeInDownLogo; 
+}
