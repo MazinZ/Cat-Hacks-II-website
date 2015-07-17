@@ -36,14 +36,25 @@ $(window).resize(function() {
 
 });
 
-
+$(window).load(function(){ 
+    console.log( $(this).height() )
+});
 
 $("#navid li").click(function(e) {
 	e.preventDefault();
 		var idName = "#" + $(this).attr('id').toLowerCase();
-	$('html, body').animate({
-		scrollTop: $(idName).offset().top -110
-	}, 1000);
+		if (idName == "#home" || idName == "#sponsors" || idName=="#apply"){
+			$('html, body').animate({
+				scrollTop: $(idName).offset().top -100
+			}, 1000);
+		}
+		else {
+			idName+="id";
+			$('html, body').animate({
+				scrollTop: $(idName).offset().top - .24*$(window).height()
+			}, 1000);
+			
+		}
 });
 
 
