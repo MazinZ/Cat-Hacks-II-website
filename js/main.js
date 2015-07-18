@@ -36,9 +36,6 @@ $(window).resize(function() {
 
 });
 
-$(window).load(function(){ 
-    console.log( $(this).height() )
-});
 
 $("#navid li").click(function(e) {
 	e.preventDefault();
