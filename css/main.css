@@ -118,6 +118,7 @@ h1 {
 	color:#508dad !important;
 	font-weight:700;
 	margin-bottom:25px;
+	letter-spacing:13px;
 	
 }
 
@@ -501,13 +502,16 @@ object:hover circle{
 	}
 	#applyDiv h1 {
 		font-size:35px;
+		letter-spacing:6px;
+
 	}
 	#contentDiv {
 		width:100px;
 	}
 	#contentDiv h1{
 		font-size:35px;
-			
+		letter-spacing:6px;
+
 	}
 	p{ 
 		text-align:center;
