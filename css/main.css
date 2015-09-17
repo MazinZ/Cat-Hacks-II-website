@@ -89,7 +89,7 @@ html, body{
 }
 
 #home {
-	height:85%;	
+	height:100%;	
 	margin:0;
 	background-color:#fff; /*efefef*/
 	width:100%;
@@ -638,6 +638,8 @@ object:hover circle{
   transform: scaleX(0);
   -webkit-transition: all 0.3s ease-in-out 0s;
   transition: all 0.3s ease-in-out 0s;
+    margin-top:46px;
+
 }
 
 .navbar li > a:hover:before {
